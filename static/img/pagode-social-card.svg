@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f44336"/>
+  <text x="150" y="300" font-size="200" fill="#ffffff">🥁 Pagode</text>
+  <text x="150" y="400" font-size="60" fill="#ffffff">Modern web applications with Go and React</text>
+</svg>

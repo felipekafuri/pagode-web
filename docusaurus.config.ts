@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Pagode',
   tagline: 'Pagode is not a framework — it’s a modern starter kit for building full-stack web applications using Go, InertiaJS, and React, powered by Tailwind CSS for styling.',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/drum-emoji.svg',
 
   // Future flags, see https://pagode.io/docs/api/pagode-config#future
   future: {
@@ -70,13 +70,13 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    image: 'img/pagode-social-card.jpg',
+    // Project's social card with drum emoji logo
+    image: 'img/pagode-social-card.svg',
     navbar: {
-      title: 'My Site',
+      title: 'Pagode',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: 'Pagode Logo',
+        src: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><text x="0" y="20" font-size="20">🥁</text></svg>',
       },
       items: [
         {
@@ -143,6 +143,8 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
+
+  plugins: [require.resolve("./src/plugins/tailwind-config")],
 };
 
 export default config;
