@@ -87,7 +87,7 @@ const config: Config = {
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/pagode',
+          href: 'https://github.com/occult/pagode',
           label: 'GitHub',
           position: 'right',
         },
@@ -131,12 +131,11 @@ const config: Config = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/pagode',
+              href: 'https://github.com/occult/pagode',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Axioms, Inc. Built with Pagode.`,
     },
     prism: {
       theme: prismThemes.github,
