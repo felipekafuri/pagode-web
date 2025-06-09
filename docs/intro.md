@@ -2,46 +2,80 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Introduction
 
-Let's discover **Pagode in less than 5 minutes**.
+## Overview
+
+**Pagode** is not a framework — it's a modern starter kit for building full-stack web applications using **Go**, **InertiaJS**, and **React**, powered by **Tailwind CSS** for styling.
+
+Pagode provides the structure and tooling you need to hit the ground running, without locking you into rigid conventions or heavyweight abstractions. It balances flexibility and productivity by letting you swap out pieces as needed while still offering a solid foundation of battle-tested technologies.
+
+While JavaScript frontends dominate the landscape, Pagode embraces a hybrid approach: it combines server-side rendering and client-side interactivity to deliver fast, modern user experiences — without sacrificing simplicity. Thanks to tools like InertiaJS and Tailwind, you can build reactive, beautiful interfaces with minimal boilerplate and zero custom Webpack/Vite configuration.
+
+Pagode proves that Go is not just for APIs — it's a powerful full-stack solution when paired with the right tools. And yes, you still get the control, speed, and simplicity you love about Go.
+
+## Foundation
+
+While many great projects were used to build Pagode, the following provide the foundation of the back and frontend. It's important to note that you are **<ins>not required to use any of these</ins>**. Swapping any of them out is relatively easy.
+
+### Backend
+
+- [Echo](https://echo.labstack.com/): High performance, extensible, minimalist Go web framework.
+- [Ent](https://entgo.io/): Simple, yet powerful ORM for modeling and querying data.
+
+### Frontend
+
+With **server-side rendered HTML** powered by **Go** and **InertiaJS**, you get the best of both worlds — a modern SPA-like experience with server-driven logic. Combined with the tools below, you can build beautiful, dynamic UIs without the usual frontend overhead.
+
+- [InertiaJS](https://inertiajs.com/): Bridges your Go backend with modern JavaScript frameworks like React, enabling full-page SPA experiences without building a separate API.
+- [React](https://reactjs.org/): A declarative library for building interactive UIs, perfectly paired with Inertia for dynamic frontend behavior.
+- [Tailwind CSS v4](https://tailwindcss.com/): A utility-first CSS framework for rapidly building custom designs directly in your markup — no context switching or naming class conflicts.
+- [shadcn/ui](https://ui.shadcn.com/): A beautifully designed, accessible component library built on top of Tailwind CSS and Radix UI — perfect for rapidly building consistent interfaces.
+
+### Storage
+
+- [SQLite](https://sqlite.org/): A small, fast, self-contained, high-reliability, full-featured, SQL database engine and the most used database engine in the world.
 
 ## Getting Started
 
-Get started by **creating a new site**.
+### Dependencies
 
-Or **try Pagode immediately** with **[pagode.new](https://pagode.new)**.
+Ensure that [Go](https://go.dev/) is installed on your system.
 
-### What you'll need
+### Getting the Code
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
-
-## Generate a new site
-
-Generate a new Pagode site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
+Start by checking out the repository. Since this repository is a _template_ and not a Go _library_, you **do not** use `go get`.
 
 ```bash
-npm init pagode@latest my-website classic
+git clone git@github.com:occult/pagode.git
+cd pagode
 ```
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+### Create an Admin Account
 
-The command also installs all necessary dependencies you need to run Pagode.
-
-## Start your site
-
-Run the development server:
+To access the admin panel, you need an admin user account. To create your first admin user, use the command-line:
 
 ```bash
-cd my-website
-npm run start
+make admin email=your@email.com
 ```
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Pagode site, you'll need to navigate the terminal there.
+This will generate an admin account using that email address and print the randomly-generated password.
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+### Start the Application
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+From within the root of the codebase, run:
+
+```bash
+make run
+```
+
+By default, you can access the application at `localhost:8000`. Your data will be stored in the `dbs` directory.
+
+### Live Reloading
+
+For automatic rebuilding when code changes, install [air](https://github.com/air-verse/air) and use:
+
+```bash
+make air-install
+make watch
+```
