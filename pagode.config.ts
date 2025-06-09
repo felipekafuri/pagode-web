@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Pagode',
-  tagline: 'Pagode is not a framework — it’s a modern starter kit for building full-stack web applications using Go, InertiaJS, and React, powered by Tailwind CSS for styling.',
+  tagline: 'Pagode is not a framework — it\'s a modern starter kit for building full-stack web applications using Go, InertiaJS, and React, powered by Tailwind CSS for styling.',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://pagode.io/docs/api/pagode-config#future
@@ -87,7 +87,7 @@ const config: Config = {
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/facebook/pagode',
           label: 'GitHub',
           position: 'right',
         },
