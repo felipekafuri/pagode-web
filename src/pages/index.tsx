@@ -16,12 +16,17 @@ function HomepageHeader() {
         <Heading as="h1" className="hero__title">
           {siteConfig.title}
         </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <p className="hero__subtitle">
+          Modern Go + React starter kit for full-stack web applications
+        </p>
+        <p className="hero__subtitle hero__subtitle--small">
+          Balancing flexibility and productivity without rigid conventions
+        </p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro">
-            Pagode Tutorial - 5min ⏱️
+            Get Started with Pagode 🥁
           </Link>
         </div>
       </div>
@@ -33,8 +38,8 @@ export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={`${siteConfig.title} - Modern Go + React Starter Kit`}
+      description="Pagode is a modern starter kit for building full-stack web applications using Go, InertiaJS, and React, powered by Tailwind CSS for styling.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

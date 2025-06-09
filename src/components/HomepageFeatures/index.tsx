@@ -11,32 +11,32 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
+    title: 'Modern Starter Kit',
     Svg: require('@site/static/img/undraw_pagode_mountain.svg').default,
     description: (
       <>
-        Pagode was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Not a framework, but a flexible foundation for building full-stack web apps
+        using Go, InertiaJS, and React, powered by Tailwind CSS for beautiful styling.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'Balanced Approach',
     Svg: require('@site/static/img/undraw_pagode_tree.svg').default,
     description: (
       <>
-        Pagode lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Combines server-side rendering with client-side interactivity for fast,
+        modern experiences—without sacrificing simplicity or requiring complex configurations.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Powered by Axioms',
     Svg: require('@site/static/img/undraw_pagode_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Pagode can
-        be extended while reusing the same header and footer.
+        Pagode proves Go is not just for APIs—it's a powerful full-stack solution when
+        paired with the right tools, created with ❤️ and maintained by Axioms.
       </>
     ),
   },

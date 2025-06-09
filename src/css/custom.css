@@ -238,3 +238,22 @@
   color: var(--primary-foreground); /* Keep white text */
   border-color: var(--primary); /* Keep red border */
 }
+
+/* Subtitle styling */
+.hero__subtitle--small {
+  font-size: 1.2rem;
+  margin-top: -1rem;
+  opacity: 0.9;
+  font-weight: normal;
+}
+
+/* Footer text in dark mode */
+[data-theme='dark'] .footer {
+  --ifm-footer-color: var(--primary-foreground);
+  --ifm-footer-link-color: var(--primary-foreground);
+  --ifm-footer-title-color: var(--primary-foreground);
+}
+
+[data-theme='dark'] .footer__link-item:hover {
+  color: var(--primary);
+}
