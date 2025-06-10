@@ -63,6 +63,18 @@ This will generate an admin account using that email address and print the rando
 
 ### Start the Application
 
+Before starting, install the frontend dependencies:
+
+```bash
+npm install
+```
+
+Then, start the Vite frontend development server:
+
+```bash
+npx vite
+```
+
 From within the root of the codebase, run:
 
 ```bash
