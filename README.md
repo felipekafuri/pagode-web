@@ -1,41 +1,52 @@
-# Website
+# Pagode Web
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+A documentation and tutorial website for Pagode, built using [Docusaurus](https://docusaurus.io/), a modern static website generator. This project provides comprehensive documentation and resources for users of the Pagode framework.
+
+## Prerequisites
+
+- Node.js (v18 or later)
+- npm
 
 ## Installation
 
-```bash
-yarn
-```
-
-## Local Development
+Install project dependencies:
 
 ```bash
-yarn start
+npm install
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+## Basic Commands
 
-## Build
+### Local Development
+
+Start a local development server:
 
 ```bash
-yarn build
+npm run start
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+This command starts the local development server and opens a browser window. Most changes are reflected live without having to restart the server.
 
-## Deployment
+### Build
 
-Using SSH:
+Build the website for production:
 
 ```bash
-USE_SSH=true yarn deploy
+npm run build
 ```
 
-Not using SSH:
+This command generates static content into the `build` directory that can be served using any static content hosting service.
+
+### Serve Built Website
+
+Preview the production build locally:
 
 ```bash
-GIT_USER=<Your GitHub username> yarn deploy
+npm run serve
 ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+### Other Commands
+
+- Clear the cache: `npm run clear`
+- Type checking: `npm run typecheck`
+- Generate translations: `npm run write-translations`
