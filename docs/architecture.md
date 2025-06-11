@@ -53,22 +53,20 @@ The configuration value for the current _environment_ (`Config.App.Environment`)
 
 A helper function (`config.SwitchEnvironment`) is available to make switching the environment easy, but this must be executed prior to loading the configuration. The common use-case for this is to switch the environment to `Test` before tests are executed.
 
-## Screenshots
+### Screenshots
 
-### Inline Form Validation
-![Inline validation](https://raw.githubusercontent.com/mikestefanello/readmeimages/main/pagoda/inline-validation.png)
+#### Dashboard
 
-### User Registration
-![Registration](https://raw.githubusercontent.com/mikestefanello/readmeimages/main/pagoda/register.png)
+<img src="https://pagode.nyc3.cdn.digitaloceanspaces.com/readme/dashboard.png" alt="Dashboard"/>
 
-### Modal with HTMX AJAX Request
-![Alpine and HTMX](https://raw.githubusercontent.com/mikestefanello/readmeimages/main/pagoda/modal.png)
+#### Upload Files
 
-### Admin Panel - User List
-![User entity list](https://raw.githubusercontent.com/mikestefanello/readmeimages/main/pagoda/admin-user_list.png)
+<img src="https://pagode.nyc3.cdn.digitaloceanspaces.com/readme/upload-files.png" alt="Upload Files"/>
 
-### Admin Panel - User Edit
-![User entity edit](https://raw.githubusercontent.com/mikestefanello/readmeimages/main/pagoda/admin-user_edit.png)
+#### Admin View
 
-### Task Queue Management
-![Manage task queues](https://raw.githubusercontent.com/mikestefanello/readmeimages/main/backlite/failed.png)
+<img src="https://pagode.nyc3.cdn.digitaloceanspaces.com/readme/admin-view.png" alt="Admin View"/>
+
+#### Settings
+
+<img src="https://pagode.nyc3.cdn.digitaloceanspaces.com/readme/settings.png" alt="Settings"/>

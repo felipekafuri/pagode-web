@@ -13,24 +13,19 @@ The _admin panel_ currently includes:
 - A completely dynamic UI to manage all entities defined by _Ent_.
 - A section to monitor all background tasks and queues.
 
-There are no separate templates or interfaces for the admin section. Users with admin access will see additional links on the default sidebar at the bottom. As with all default UI components, you can easily move these pages and links to a dedicated section, layout, etc. 
+There are no separate templates or interfaces for the admin section. Users with admin access will see additional links on the default sidebar at the bottom. As with all default UI components, you can easily move these pages and links to a dedicated section, layout, etc.
 
 Clicking on the link for any given entity type will provide a pageable table of entities and the ability to add/edit/delete.
 
-## Screenshots
+### Screenshots
 
-### User Entity List
-![User entity list](https://raw.githubusercontent.com/mikestefanello/readmeimages/main/pagoda/admin-user_list.png)
+#### Admin View
 
-### User Entity Edit 
-![User entity edit](https://raw.githubusercontent.com/mikestefanello/readmeimages/main/pagoda/admin-user_edit.png)
-
-### Monitor Task Queues
-![Manage task queues](https://raw.githubusercontent.com/mikestefanello/readmeimages/main/backlite/failed.png)
+<img src="https://pagode.nyc3.cdn.digitaloceanspaces.com/readme/admin-view.png" alt="Admin View"/>
 
 ## Code Generation
 
-In order to automatically and dynamically provide admin functionality for entities, code generation is used by means of leveraging Ent's [extension API](https://entgo.io/docs/extensions) which makes generating code using the Ent graph schema very easy. 
+In order to automatically and dynamically provide admin functionality for entities, code generation is used by means of leveraging Ent's [extension API](https://entgo.io/docs/extensions) which makes generating code using the Ent graph schema very easy.
 
 A [custom extension](https://github.com/occult/pagode/blob/master/ent/admin/extension.go) is provided to generate code that provides flat entity type structs and handler code that work directly with Echo. So, both of those are required in order for any of this to work. Whenever you modify one of your entity types or generate a new one, the admin code will also automatically generate.
 
