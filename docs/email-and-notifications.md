@@ -1,5 +1,5 @@
 ---
-sidebar_position: 12
+sidebar_position: 11
 ---
 
 # Email and Notifications
@@ -25,6 +25,7 @@ err := c.Mail.Send(ctx, mail.Email{
 Pagode supports templated emails using Go's built-in templating system. Templates are stored in a configurable location and can include both text and HTML versions.
 
 Example template structure:
+
 ```
 templates/
 ├── emails/
@@ -70,13 +71,13 @@ The verification route handler would look something like:
 ```go
 func (h *Auth) VerifyEmail(ctx echo.Context) error {
     token := ctx.Param("token")
-    
+
     // Validate the token
     email, err := h.container.Auth.ValidateEmailVerificationToken(token)
     if err != nil {
         return echo.NewHTTPError(http.StatusBadRequest, "Invalid or expired verification token")
     }
-    
+
     // Find the user by email
     user, err := h.container.ORM.User.
         Query().
@@ -85,7 +86,7 @@ func (h *Auth) VerifyEmail(ctx echo.Context) error {
     if err != nil {
         return err
     }
-    
+
     // Update the user as verified
     _, err = user.Update().
         SetVerified(true).
@@ -93,10 +94,10 @@ func (h *Auth) VerifyEmail(ctx echo.Context) error {
     if err != nil {
         return err
     }
-    
+
     // Show success message
     flash.Success(ctx, "Your email has been verified!")
-    
+
     // Redirect to login
     return redirect.New(ctx).
         Route(routenames.Login).

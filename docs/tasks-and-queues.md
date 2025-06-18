@@ -1,5 +1,5 @@
 ---
-sidebar_position: 13
+sidebar_position: 12
 ---
 
 # Tasks and Queues
@@ -108,7 +108,7 @@ tasks:
     default: 5
     emails: 2
     imports: 1
-  
+
   # Default retry settings
   max_retries: 3
   retry_delay: 60s

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 14
+sidebar_position: 13
 ---
 
 # Caching
@@ -70,13 +70,13 @@ Here's a complete example of using the cache for an expensive database query:
 func (h *Handler) GetPopularProducts(ctx echo.Context) error {
     var products []Product
     cacheKey := "popular-products"
-    
+
     // Try to get from cache
     found, err := h.container.Cache.Get(ctx.Request().Context(), cacheKey, &products)
     if err != nil {
         return err
     }
-    
+
     if !found {
         // Cache miss - fetch from database
         products, err = h.container.ORM.Product.
@@ -85,11 +85,11 @@ func (h *Handler) GetPopularProducts(ctx echo.Context) error {
             Order(ent.Desc(product.FieldViewCount)).
             Limit(10).
             All(ctx.Request().Context())
-        
+
         if err != nil {
             return err
         }
-        
+
         // Store in cache for 1 hour
         err = h.container.Cache.SetWithTags(
             ctx.Request().Context(),
@@ -98,13 +98,13 @@ func (h *Handler) GetPopularProducts(ctx echo.Context) error {
             time.Hour,
             []string{"products", "featured"},
         )
-        
+
         if err != nil {
             // Log cache error but continue (non-fatal)
             log.Printf("Cache error: %v", err)
         }
     }
-    
+
     return ctx.JSON(http.StatusOK, products)
 }
 ```
@@ -121,7 +121,7 @@ Cache settings can be configured in `config/config.yaml`:
 cache:
   # Default expiration for items without explicit TTL
   expiration: 10m
-  
+
   # Controls whether caching is enabled
   enabled: true
 ```

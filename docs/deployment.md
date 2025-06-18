@@ -1,5 +1,5 @@
 ---
-sidebar_position: 11
+sidebar_position: 10
 ---
 
 # Deployment
@@ -11,11 +11,13 @@ This guide covers how to deploy your Pagode application to production environmen
 Before deploying your Pagode application, ensure you've taken the following steps:
 
 1. **Update Configuration**
+
    - Modify `config/config.yaml` with production-appropriate settings
-   - Set a secure, random value for `App.EncryptionKey` 
+   - Set a secure, random value for `App.EncryptionKey`
    - Configure database settings properly
 
 2. **Build for Production**
+
    - Use the production build command: `make build`
    - This creates an optimized binary in the `./bin` directory
 
