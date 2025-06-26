@@ -38,14 +38,14 @@ The `config` package provides a flexible, extensible way to store all configurat
 
 Leveraging the functionality of [viper](https://github.com/spf13/viper) to manage configuration, all configuration values can be overridden by environment variables. The name of the variable is determined by the set prefix and the name of the configuration field in `config/config.yaml`.
 
-In `config/config.go`, the prefix is set as `pagoda` via `viper.SetEnvPrefix("pagoda")`. Nested fields require an underscore between levels. For example:
+In `config/config.go`, the prefix is set as `pagode` via `viper.SetEnvPrefix("pagode")`. Nested fields require an underscore between levels. For example:
 
 ```yaml
 http:
   port: 1234
 ```
 
-can be overridden by setting an environment variable with the name `PAGODA_HTTP_PORT`.
+can be overridden by setting an environment variable with the name `PAGODE_HTTP_PORT`.
 
 ### Environments
 

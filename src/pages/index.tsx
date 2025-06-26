@@ -29,6 +29,18 @@ function HomepageHeader() {
             Get Started with Pagode 🥁
           </Link>
         </div>
+        <div style={{marginTop: '2rem'}}>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/8bg_diGK9UY"
+            title="Pagode Presentation"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            style={{maxWidth: '100%'}}
+          />
+        </div>
       </div>
     </header>
   );

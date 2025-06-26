@@ -22,7 +22,7 @@ Before deploying your Pagode application, ensure you've taken the following step
    - This creates an optimized binary in the `./bin` directory
 
 3. **Environment Variables**
-   - Set the `PAGODA_APP_ENVIRONMENT` variable to `production`
+   - Set the `PAGODE_APP_ENVIRONMENT` variable to `production`
    - Override other config settings as needed using environment variables
 
 ## Deployment Options
@@ -52,7 +52,7 @@ Build and run the Docker image:
 
 ```bash
 docker build -t pagode-app .
-docker run -p 8000:8000 -e PAGODA_APP_ENVIRONMENT=production pagode-app
+docker run -p 8000:8000 -e PAGODE_APP_ENVIRONMENT=production pagode-app
 ```
 
 ### Traditional Hosting
@@ -76,7 +76,7 @@ User=pagode
 WorkingDirectory=/path/to/pagode
 ExecStart=/path/to/pagode/bin/pagode
 Restart=on-failure
-Environment=PAGODA_APP_ENVIRONMENT=production
+Environment=PAGODE_APP_ENVIRONMENT=production
 
 [Install]
 WantedBy=multi-user.target
