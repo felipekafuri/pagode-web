@@ -209,9 +209,18 @@
     border-color: var(--color-border);
   }
 
+  html, body {
+    background-color: var(--color-background) !important;
+    color: var(--color-foreground) !important;
+  }
+  
   body {
-    background-color: var(--color-background);
-    color: var(--color-foreground);
+    background-color: var(--color-background) !important;
+    color: var(--color-foreground) !important;
+  }
+  
+  .main-wrapper {
+    background-color: var(--color-background) !important;
   }
 }
 
