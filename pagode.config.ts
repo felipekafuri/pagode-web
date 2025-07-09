@@ -69,6 +69,17 @@ const config: Config = {
     ],
   ],
 
+  plugins: [
+    require.resolve("./src/plugins/tailwind-config"),
+    [
+      '@docusaurus/plugin-google-gtag',
+      {
+        trackingID: 'G-PDQ9RJKCPM',
+        anonymizeIP: true,
+      },
+    ],
+  ],
+
   themeConfig: {
     // Project's social card with drum emoji logo
     image: "img/pagode-social-card.svg",
