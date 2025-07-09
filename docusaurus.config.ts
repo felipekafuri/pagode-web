@@ -144,7 +144,16 @@ const config: Config = {
     },
   } satisfies Preset.ThemeConfig,
 
-  plugins: [require.resolve("./src/plugins/tailwind-config")],
+  plugins: [
+    require.resolve("./src/plugins/tailwind-config"),
+    [
+      '@docusaurus/plugin-google-gtag',
+      {
+        trackingID: 'G-PDQ9RJKCPM',
+        anonymizeIP: true,
+      },
+    ],
+  ],
 };
 
 export default config;
