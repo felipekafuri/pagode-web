@@ -10,7 +10,7 @@ module.exports = function tailwindPlugin(context, options) {
         
         // Add Tailwind CSS and other necessary PostCSS plugins in the correct order
         postcssOptions.plugins.push(
-          require('tailwindcss'),
+          require('@tailwindcss/postcss'),
           require('autoprefixer'),
           ...plugins, // Add other plugins back
         );
