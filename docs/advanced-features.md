@@ -129,3 +129,16 @@ err := c.Mail.Send(ctx, mail.Email{
     Data:     data,
 })
 ```
+
+## Payment Integration
+
+Pagode includes comprehensive payment processing capabilities with Stripe integration. This covers subscription management, one-time purchases, and premium content protection.
+
+Key features:
+- **Subscription billing** with monthly/yearly plans
+- **One-time product purchases** with immediate access
+- **Premium content middleware** for access control
+- **PCI-compliant processing** with Stripe Elements
+- **Complete database modeling** with Ent ORM entities
+
+For detailed information about setting up and using the payment system, see the [Payment Integration](./payment-integration.md) documentation.

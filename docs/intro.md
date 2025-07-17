@@ -10,6 +10,8 @@ sidebar_position: 1
 
 Pagode provides the structure and tooling you need to hit the ground running, without locking you into rigid conventions or heavyweight abstractions. It balances flexibility and productivity by letting you swap out pieces as needed while still offering a solid foundation of battle-tested technologies.
 
+Out of the box, Pagode includes **comprehensive payment integration** with Stripe, supporting both subscription billing and one-time purchases, making it perfect for SaaS applications and e-commerce platforms.
+
 While JavaScript frontends dominate the landscape, Pagode embraces a hybrid approach: it combines server-side rendering and client-side interactivity to deliver fast, modern user experiences — without sacrificing simplicity. Thanks to tools like InertiaJS and Tailwind, you can build reactive, beautiful interfaces with minimal boilerplate and zero custom Webpack/Vite configuration.
 
 Pagode proves that Go is not just for APIs — it's a powerful full-stack solution when paired with the right tools. And yes, you still get the control, speed, and simplicity you love about Go.

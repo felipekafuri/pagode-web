@@ -38,8 +38,8 @@ const FeatureList: FeatureItem[] = [
     description: (
       <>
         No scaffolding rewrites, no post-hackathon refactors. Pagode ships with
-        sane defaults, built-in auth, database integration, environment config,
-        and deployable Docker support.
+        sane defaults, built-in auth, database integration, payment processing,
+        and deployable Docker support—perfect for SaaS applications.
       </>
     ),
   },
