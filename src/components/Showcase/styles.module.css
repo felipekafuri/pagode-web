@@ -1,0 +1,132 @@
+.showcase {
+  padding: 4rem 0;
+  background: linear-gradient(180deg,
+    var(--ifm-background-surface-color) 0%,
+    var(--ifm-color-emphasis-100) 100%
+  );
+}
+
+.showcase h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.showcaseDescription {
+  font-size: 1.125rem;
+  margin-bottom: 3rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.showcaseGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.showcaseCard {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.showcaseCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(102, 126, 234, 0.15);
+  border-color: var(--ifm-color-primary);
+}
+
+.showcaseGradient {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.showcaseGradient::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.showcaseCard:hover .showcaseGradient::before {
+  opacity: 1;
+}
+
+.showcaseIcon {
+  font-size: 4rem;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+  transition: transform 0.3s ease;
+}
+
+.showcaseCard:hover .showcaseIcon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.showcaseCard .card__body {
+  flex: 1;
+  padding: 1.5rem;
+}
+
+.showcaseTitle {
+  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
+  color: var(--ifm-heading-color);
+}
+
+.showcaseDescription {
+  color: var(--ifm-color-emphasis-700);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.showcaseTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.showcaseTag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 16px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ifm-color-emphasis-800);
+  transition: all 0.2s ease;
+}
+
+.showcaseCard:hover .showcaseTag {
+  background: rgba(102, 126, 234, 0.15);
+  color: var(--ifm-color-primary);
+}
+
+.showcaseCard .card__footer {
+  padding: 1.5rem;
+  padding-top: 0;
+}
+
+.showcaseCard .button {
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
